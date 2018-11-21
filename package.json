@@ -1,0 +1,14 @@
+{
+  "name": "toast.js",
+  "version": "1.0.0",
+  "description": "Simple Toast plugin on Vanilla.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "toast",
+    "vanilla"
+  ],
+  "author": "Mamyraimov Asset <mamiraimov.aset@gmail.com>",
+  "license": "MIT"
+}
