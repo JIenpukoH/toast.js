@@ -1,0 +1,74 @@
+.toast{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  @media(max-width:768px){
+    bottom:0;
+    top:initial;
+    width: 100%;
+  }
+  &__container{
+    position: relative;
+    margin:10px;
+    @media (max-width: 768px){
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__message{
+    color:#fff;
+    padding: 10px 15px;
+    padding-right: 32px;
+    max-width:350px;
+    margin-bottom:10px;
+    display: flex;
+    position: relative;
+    word-break: break-word;
+    @media(max-width: 768px){
+      max-width: 100%;
+      width: 100%;
+    }
+    &.info{
+      background-color: #9c27b0;
+    }
+
+    &.success {
+      background-color: #4caf50
+    }
+
+    &.warning {
+      background-color: #ff9800
+    }
+
+    &.danger {
+      background-color: #e51c23
+    }
+    &.hide{
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+    .close{
+      display: block;
+      position: absolute;
+      right: 8px;
+      width: 16px;
+      height: 16px;
+      &:before,&:after{
+        content:" ";
+        display: block;
+        position: absolute;
+        height: 16px;
+        width: 16px;
+      }
+      &:before{
+        border-left:2px solid #fff;
+        transform: rotateZ(45deg) translateX(8px);
+      }
+      &:after{
+        border-right:2px solid #fff;
+        transform: rotateZ(-45deg) translateX(-8px);
+      }
+    }
+  }
+}
